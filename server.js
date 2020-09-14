@@ -1,5 +1,6 @@
 const fs=require("fs");
 const http=require("http");
+const port = process.env.PORT || 3000;
 
 //get the current timestamp
 var date = new Date();
@@ -37,4 +38,4 @@ http.createServer(function(req,res){
     res.write("<li>"+txtFiles[i]+"</li>");
     res.write("</ul>");
     res.end();
-}).listen(3000);
+}).listen(port);
